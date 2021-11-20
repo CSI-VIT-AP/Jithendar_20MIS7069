@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<a>href used to specify the url of the page that the link goes to-->
+        <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+        <!--target link - speifies where the open the linked document.-->
+        <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+ <h2>Absolute URLs</h2> <!--absolute URL (full web address)-->
+<p><a href="https://www.w3.org/">W3C</a></p>
+<p><a href="https://www.google.com/">Google</a></p>
+
+<h2>Relative URLs</h2>  <!--relative URL(a link to a page with the same website.)-->
+<p><a href="html_images.asp">HTML Images</a></p>
+<p><a href="/css/default.asp">CSS Tutorial</a></p>
+        
+<!-- to use an image as a link-->
+<!--put <img> tag inside the <a> tag-->
+<a href="default.asp">
+    <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+    </a>
+    <!--link to an email address-->
+    <!--Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):-->
+    <a href="mailto:someone@example.com">Send email</a>
+    <!--button as a link-->
+    <button onclick="document.location='default.asp'">HTML Tutorial</button>
+    <!--The title attribute specifies extra information about an element. The information is
+         most often shown as a tooltip text when the mouse 
+         moves over the element.-->
+       
+      <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a> 
+      <!--HTML Link Colors-->
+   <style>
+       a:link{
+           color:green;
+           background-color:transparent;
+           text-decoration:none;
+       }
+       a:visited {
+           color:pink;
+           background-color:transparent;
+           text-decoration:none;
+       }
+       a:hover {
+           color:red;
+           background-color:transparent;
+           text-decoration:underline;
+       }
+       a:active{
+           color:yellow;
+           background-color:transparent;
+           text-decoration:none;
+       }
+   </style>
+<!--Link bottons-->
+<style>
+    a:link, a:visited{
+        background-color:#f44336;
+        color:white;
+        padding:15px 25px;
+        text-align:center;
+        text-decoration:none;
+        display:inline-block;
+    }
+a:hover, a:active{
+    background-color: red;
+}        
+</style>
+<!--Bookmark
+to create a bookmark - first create the bookmark, then add a link to it.-->
+<!--to create bookmark use <id>-->
+    <h2 id="C4">Chapter 4</h2>
+<!--add a link to the bookmark-->
+     <a href="#C4">Jump to Chapter 4</a>
+<!--The HTML <img> tag is used to embed an image in a web page.
+src - define  the URL of  image
+alt - Specifies an alternate text for the image-->
+<img src="pic_trulli.jpg" alt="Italian Trulli">
+<!--image size - width and height-->
+<img src="img_girl.jpg" alt="Girl in a jacket"
+style="width:500px;height:600px;">
+<style>
+    img {
+      width: 100%;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+    
+    <img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+   <!--If you have your images in a sub-folder, you must include the folder 
+    name in the src attribute:--> 
+    <img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+  <!--images on another server/website--> 
+  <!--must specify full URL in src attribute-->   
+  <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+ <!--Animated image--> 
+ <img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+ <!--Image as a link-->
+ <a href="default.asp">
+     <img src = "smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+ </a>
+<!--Image Floating-->
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.</p>
+    
+    <p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    The image will float to the left of the text.</p>
+<!--Image map
+<map> tag defines an image map.-->
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+      <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+<!--Background Image on a HTML element-->
+<div style="background-image:url('img_girl.jpg');"></div>
+<!--can also specify the background image in the <style> element, in the <head> section-->
+    <style>
+        div{
+            background-image:url('img_girl.jpg');
+        }
+    </style>
+<!--background image on a page-->
+<style>
+    body {
+      background-image: url('img_girl.jpg');
+    }
+    </style>
+<!--background repeat-->
+<style>
+    body{
+        background-image:url('example_img_girl.jpg');
+    }
+</style>
+ <!--no-repeat-->
+ <style>
+    body {
+      background-image: url('example_img_girl.jpg');
+      background-repeat: no-repeat;
+    }
+    </style>
+    <!--background-cover-->
+    <style>
+        body {
+          background-image: url('img_girl.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+<!--background-stretch-->
+<style>
+    body {
+      background-image: url('img_girl.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+<!--HTML <picture>-->
+  <!--<picture> element contains one or more <source> elements,
+        each referring to different images through the srcset attribute. 
+        This way the browser can choose the image that best fits the 
+         current view and/or device.-->  
+<!--Each <source> element has a media attribute that defines when the image is the most suitable.-->
+<picture>
+    <source media=(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 465px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg"> <!--src defines the URL of the image.-->
+</picture>
+<!--The browser will use the first image format it recognizes:-->
+
+<picture>
+  <source srcset="img_avatar.png">
+  <source srcset="img_girl.jpg">
+  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+</picture>
+<!--<tr> - table row.
+    <th>- table header.
+        <td>- table data.-->
+<!--Table borders-->
+<!--collapse - to avoid having double borders.-->
+  table, th, td {
+       border: 1px solid white;
+         border-collapse: collapse;
+
+         th,td{
+      background-color: #96D4D4;
+         }
+  <!--round table borders-->
+  table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  <!--dotted table borders-->
+ th,td{
+    border-style: dotted;
+ }
+  <!--border color-->
+  th,td{
+      border-color:#96D4D4;
+  }
+<style>
+    th,td {
+  border-style: dotted;
+}
+</style>
+<body>
+  <table style="width:70%">
+    <tr>
+      <th style="width:70%">Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+    <tr style="height:40px">
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+  </table>
+</body>
+  <!--align Table Headers-->
+  th {
+    text-align: left;
+  }
+  <!--Header for multiple coloumns.-->
+<table>
+    <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+    </tr>
+
+<tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+</tr>
+
+<tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>53</td>
+</tr>
+</table>
+<!--Table Captions.-->
+<table style="width:100%">
+    <caption>Monthly savings</caption>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$50</td>
+    </tr>
+  </table>
+
+<!--padding -->
+th, td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+  <!--Zebra Stripes-->
+  tr:nth-child(even) {
+    background-color:#D6EEEE;
+}
+<!--VERTICAL ZEBRA STRIPES-->
+td:nth-child(even), th:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  <!--combined vertical and horzintal zebra stripes-->
+  tr:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+  }
+  
+  th:nth-child(even),td:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+  }
+
+  <!--own table-joshika-->
+  <style>
+     table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}  
+    </style>
+    <body>
+    <h2>Table With Border</h2>
+        
+    <table style="width:100%">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+
+<!--UNORDERED HTML LIST-->
+<ul>
+    <li>coffee</li>
+    <li>milk</li>
+    <li>bread</li>
+</ul>
+<!--ordered Html LIST-->
+<ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+
+<!--Discription lists-->
+<dl>
+    <dt>coffe</dt>
+    <dd> - black hot drink</dd>
+    <dt>milk</dt>
+    <dd> - white cold milk</dd>
+</dl>
+    </head>
+</html>

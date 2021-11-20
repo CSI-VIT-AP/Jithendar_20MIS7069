@@ -1,0 +1,64 @@
+<!--HTML - FORMS-->
+<!DoCTYPE html>
+<head>
+   <body>
+       <form>
+        <form action="/action_page.php" target="_blank"method="get"autocomplete="on"
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+            <fieldset>
+                <legend>personalia:</legend>
+           
+       <h2>HTML Forms</h2>
+       <label for="fname">First name:</label><br>
+       <input type="text" id="fname" name="fname" value="John"><br>
+       <label for="lname">Last name:</label><br>
+       <input type="text" id="lname" name="lname" value="Doe">
+       <br>
+       <input type="submit" formmethod="post" value="Submit using POST">
+    </fieldset> 
+       <label for="Email">Email:</label><input type="text"id="email name="email
+<br><br> 
+<input type="submit"value="submit">
+<p>if we click the submit button ,the form data will be sent to 
+    a page called "/action_page.php".</p>
+<br><br>
+<!--<datalist> specifies a pre defined options for an <input>elemnent.-->
+    <input list="browsers">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+  <br><br>
+<!--SELECT element-->
+<form action="/action_page.php">
+    <textarea name="meassage"rows="10"cols="10"style="width:100px;height:400px;">The dog is barking.</textarea>
+    <br><br>
+<label for="cars">Choose a Car:</label>
+<select id="cars"name="cars"size="4"multiple>
+    <option value="volvo">volvo</option>
+    <option value="saab">saab</option>
+    <option value="fiat"selected>fiat</option> 
+    <option value="audi">audi</option>
+</select>
+<input type="submit">
+<!--output element.-->
+<br><br>
+<input type="range"id="a"name="a"value="50">
+100+
+<input type="number"id="b"name="b"value="50"
+=
+<output name="x"for="a b"></output>
+<br><br>
+<input type="submit">
+</form>
+<br>
+<button type="button"onclick="alert('Hello World!')">Click Me!</button>
+</form>
+</body>
+    </form>
+    </body>
+</head>
